@@ -1,7 +1,7 @@
-import type { AppData } from "./useAppData.types";
-import type { AppDataHandlers } from "./useAppDataHandlers.types";
+import type { AppData } from './useAppData.types';
+import type { AppDataHandlers } from './useAppDataHandlers.types';
 
-import { downloadFileFromDataUrl, getImageFileDataFromFile } from "../App.helpers";
+import { downloadFileFromDataUrl, getImageFileDataFromFile } from '../App.helpers';
 
 export const useAppDataHandlers = ({
   localState,

@@ -1,5 +1,5 @@
-import * as pdfjsLib from "pdfjs-dist";
-import { FileData } from "./App.types";
+import * as pdfjsLib from 'pdfjs-dist';
+import { FileData } from './App.types';
 
 export const IMAGE_FORMATS = {
   png: 'image/png',
@@ -25,8 +25,8 @@ export const convertPDFtoImage = async (file: Blob, format = IMAGE_FORMATS.png) 
 
   canvas.width = Math.floor(viewport.width * outputScale);
   canvas.height = Math.floor(viewport.height * outputScale);
-  canvas.style.width = Math.floor(viewport.width) + "px";
-  canvas.style.height =  Math.floor(viewport.height) + "px";
+  canvas.style.width = Math.floor(viewport.width) + 'px';
+  canvas.style.height =  Math.floor(viewport.height) + 'px';
 
   const transform = outputScale !== 1
     ? [outputScale, 0, 0, outputScale, 0, 0]

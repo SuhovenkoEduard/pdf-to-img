@@ -1,6 +1,6 @@
-import type { FileData } from "../App.types";
+import type { FileData } from '../App.types';
 
-import React from "react";
+import React from 'react';
 
 export type AppDataLocalState = {
   fileData: FileData | null;

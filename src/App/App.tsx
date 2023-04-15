@@ -1,6 +1,6 @@
 import React from 'react'
-import { useAppData } from "./hooks";
-import { useAppDataHandlers } from "./hooks";
+import { useAppData } from './hooks';
+import { useAppDataHandlers } from './hooks';
 
 import './app.scss';
 

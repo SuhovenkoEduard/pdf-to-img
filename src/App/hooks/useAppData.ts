@@ -1,7 +1,7 @@
-import type { FileData } from "../App.types";
-import type { AppData } from "./useAppData.types";
+import type { FileData } from '../App.types';
+import type { AppData } from './useAppData.types';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 export const useAppData = (): AppData => {
   const [fileData, setFileData] = useState<FileData | null>(null)
