@@ -5,8 +5,8 @@ import { App } from './App';
 import './index.scss';
 
 import * as pdfjsLib from 'pdfjs-dist';
-import PDFJSWorker from 'pdfjs-dist/legacy/build/pdf.worker.entry'
-pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJSWorker
+import PDFJSWorker from 'pdfjs-dist/legacy/build/pdf.worker.entry';
+pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJSWorker;
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(

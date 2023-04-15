@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useAppData } from './hooks';
 import { useAppDataHandlers } from './hooks';
 
@@ -10,7 +10,7 @@ export const App = () => {
   const handlers = useAppDataHandlers({
     localState,
     localActions
-  })
+  });
   
   return (
     <div className="app">

@@ -16,8 +16,8 @@ export const useAppDataHandlers = ({
       return;
     }
     
-    localActions.setFileData(await getImageFileDataFromFile(files[0]))
-  }
+    localActions.setFileData(await getImageFileDataFromFile(files[0]));
+  };
   
   const handleFileDownload: AppDataHandlers['handleFileDownload'] = () => {
     if (!localState.fileData) {

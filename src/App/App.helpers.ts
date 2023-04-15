@@ -9,7 +9,7 @@ export const IMAGE_FORMATS = {
 export const IMAGE_EXTENSIONS = {
   [IMAGE_FORMATS.png]: 'png',
   [IMAGE_FORMATS.jpeg]: 'jpeg'
-}
+};
 
 export const convertPDFtoImage = async (file: Blob, format = IMAGE_FORMATS.png) => {
   const url = URL.createObjectURL(file);
@@ -45,12 +45,12 @@ export const convertPDFtoImage = async (file: Blob, format = IMAGE_FORMATS.png) 
   const blob: Blob = await new Promise((resolve, reject) => {
     canvas.toBlob((blob) => {
       if (blob) {
-        resolve(blob)
+        resolve(blob);
       } else {
-        reject()
+        reject();
       }
-    })
-  })
+    });
+  });
   
   return {
     file: new File([blob], file.name.replace('pdf', IMAGE_EXTENSIONS[format]), {
@@ -61,9 +61,9 @@ export const convertPDFtoImage = async (file: Blob, format = IMAGE_FORMATS.png) 
 };
 
 export const fetchFileDataUrl = async (file: Blob): Promise<string> => {
-  const fileReader = new FileReader()
+  const fileReader = new FileReader();
   return await new Promise(resolve => {
-    fileReader.readAsDataURL(file)
+    fileReader.readAsDataURL(file);
     fileReader.onload = () => {
       resolve(fileReader.result as string);
     };
@@ -75,7 +75,7 @@ export const downloadFileFromDataUrl = (fileName: string, dataUrl: string) => {
   link.download = fileName;
   link.href = dataUrl;
   link.click();
-}
+};
 
 export const getImageFileDataFromFile = async (file: Blob): Promise<FileData> => {
   if (file.type === 'application/pdf') {
@@ -83,7 +83,7 @@ export const getImageFileDataFromFile = async (file: Blob): Promise<FileData> =>
     return {
       name: imageFile.name,
       dataUrl: imageDataUrl
-    }
+    };
   } else {
     const fileDataUrl = await fetchFileDataUrl(file);
     return {
@@ -91,4 +91,4 @@ export const getImageFileDataFromFile = async (file: Blob): Promise<FileData> =>
       dataUrl: fileDataUrl
     };
   }
-}
+};
